@@ -12,9 +12,13 @@
 
         comtypes
         PyGetWindow
-        
 
-## Example:
+
+## **Installation**
+[click here](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md#installation)
+<HR>
+        
+## **Example**:
 
     import time
     import PyTaskbar
@@ -53,8 +57,6 @@
         print('close me!')
 
 
-## **Installation**
-[click here](https://github.com/somePythonProgrammer/TbProgressLib/blob/main/docs.md#installation)
 <HR>
 
 ### Happy Coding!
