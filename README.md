@@ -16,41 +16,41 @@
 
 ## Example:
 
-        import time
-        import PyTaskbar
+    import time
+    import PyTaskbar
 
-        prog = PyTaskbar.Progress()
-        prog.init()
+    prog = PyTaskbar.Progress()
+    prog.init()
 
-        prog.setState('loading')
-        time.sleep(5)
+    prog.setState('loading')
+    time.sleep(5)
 
-        prog.setState('normal')
+    prog.setState('normal')
 
-        for i in range(100):
-            prog.setProgress(i)
-            time.sleep(0.05)
-        prog.setProgress(0)
+    for i in range(100):
+        prog.setProgress(i)
+        time.sleep(0.05)
+    prog.setProgress(0)
 
-        prog.setState('warning')
+    prog.setState('warning')
 
-        for i in range(100):
-            prog.setProgress(i)
-            time.sleep(0.05)
+    for i in range(100):
+        prog.setProgress(i)
+        time.sleep(0.05)
 
-        prog.setProgress(0)
-        prog.setState('error')
+    prog.setProgress(0)
+    prog.setState('error')
 
-        for i in range(100):
-            prog.setProgress(i)
-            time.sleep(0.05)
+    for i in range(100):
+        prog.setProgress(i)
+        time.sleep(0.05)
 
-        prog.setProgress(0)
+    prog.setProgress(0)
 
-        prog.setState('done')
-        while True:
-            time.sleep(1)
-            print('close me!')
+    prog.setState('done')
+    while True:
+        time.sleep(1)
+        print('close me!')
 
 
 ## **Installation**
