@@ -2,7 +2,7 @@
 ### The ultimate taskbar progress python package!
 
 ![](https://img.shields.io/github/downloads/somePythonProgrammer/PyTaskbar/total)
-![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar)
+![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar?label=license)
 
 [Docs Here!](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md)
 
