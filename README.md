@@ -8,13 +8,16 @@
 
 #### Works for both terminals and GUIs!
 
-## requirements:
+#### Then use it by adding this line: 
+        import tbprog
+
+## Requirements:
 
         comtypes
         PyGetWindow
         
 
-## example:
+## Example:
 
         import time
         import PyTaskbar
@@ -53,7 +56,7 @@
             print('close me!')
 
 
-## **installation**
+## **Installation**
 [click here](https://github.com/somePythonProgrammer/TbProgressLib/blob/main/docs.md#installation)
 <HR>
 
