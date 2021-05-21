@@ -8,9 +8,6 @@
 
 #### Works for both terminals and GUIs!
 
-#### Then use it by adding this line: 
-        import tbprog
-
 ## Requirements:
 
         comtypes
