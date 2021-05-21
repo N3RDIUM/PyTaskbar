@@ -6,14 +6,7 @@
 
 [Docs Here!](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md)
 
-#### Want to get taskbar progress hassle free?
-
-#### Just run the install.py file with your python, and copy the TaskbarLib.tlb file to your project directory!
-
-#### It works for both terminals and GUIs!
-
-#### Then use it by adding this line: 
-        import tbprog
+#### Works for both terminals and GUIs!
 
 ## requirements:
 
@@ -24,9 +17,9 @@
 ## example:
 
         import time
-        import tbprog
+        import PyTaskbar
 
-        prog = tbprog.Progress()
+        prog = PyTaskbar.Progress()
         prog.init()
 
         prog.setState('loading')
@@ -62,7 +55,6 @@
 
 ## **installation**
 [click here](https://github.com/somePythonProgrammer/TbProgressLib/blob/main/docs.md#installation)
-# _______________________________________________________________________
-### Please let me know if there are any problems in the Issues tab.
+<HR>
 
 ### Happy Coding!
