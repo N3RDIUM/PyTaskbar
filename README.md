@@ -1,4 +1,4 @@
-# TbProgressLib
+# PyTaskbar
 ### The ultimate taskbar progress python package!
 
 ![](https://img.shields.io/github/downloads/somePythonProgrammer/PyTaskbar/total)
