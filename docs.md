@@ -1,6 +1,6 @@
 # Welcome to the TbProgressLib documentation!
-![](https://img.shields.io/github/downloads/somePythonProgrammer/TbProgressLib/total)
-![](https://img.shields.io/github/license/somePythonProgrammer/TbProgressLib)
+![](https://img.shields.io/github/downloads/somePythonProgrammer/PyTaskbar/total)
+![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar)
 
 ### The ultimate taskbar progress python package!
 
