@@ -3,6 +3,7 @@
 
 ![](https://img.shields.io/github/downloads/somePythonProgrammer/PyTaskbar/total)
 ![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar?label=license)
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=somePythonProgrammer.PyTaskbar)
 
 [Docs Here!](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md)
 
