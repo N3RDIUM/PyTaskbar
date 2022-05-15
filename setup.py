@@ -1,4 +1,14 @@
 import setuptools
+import sys
+import shutil
+
+# Copy the PyTaskbar/TaskbarLib.tlb file to the dist folder
+
+def copy_tlb(dst):
+    shutil.copy("PyTaskbar\\TaskbarLib.tlb", dst)
+
+sitepackages_path = sys.prefix + '\\Lib\\site-packages'
+libpath = sitepackages_path + '\\PyTaskbar\\TaskbarLib.tlb'.replace('\\', '/')
 
 setuptools.setup(
     name='PyTaskbar',
@@ -16,5 +26,6 @@ setuptools.setup(
     install_requires=[
         'comtypes',
         'setuptools',
-    ]
+    ],
+    include_package_data=True,
 )
