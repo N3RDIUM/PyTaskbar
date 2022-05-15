@@ -18,9 +18,8 @@ setuptools.setup(
     packages = setuptools.find_packages(include=['PyTaskbar']),
     package_dir={'PyTaskbar': 'PyTaskbar'},
     classifiers = [
-        'Programming Language :: Python :: 3',
-        'Liscence :: OSI Approved :: MIT Licence',
-        'Operating System :: Windows'
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: Microsoft :: Windows :: Windows 10',
     ],
     python_requires='>=3.6',
     install_requires=[
@@ -28,4 +27,7 @@ setuptools.setup(
         'setuptools',
     ],
     include_package_data=True,
+    url = 'https://github.com/somePythonProgrammer/PyTaskbar',
+    long_description_content_type='text/markdown',
+    long_description=open('README.md').read(),
 )

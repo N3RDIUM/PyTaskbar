@@ -44,8 +44,6 @@ Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
 
 6.type 'python install.py' and hit enter.
 
-7.copy 'TaskbarLib.tlb' to your project directory.
-
 8.Try out the [example](#docs_example) now!
 
 ##### [back to top](#index)
