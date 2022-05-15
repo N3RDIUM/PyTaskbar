@@ -10,5 +10,4 @@
 ## Changes in the code should have:
 - appropriate [docstrings](https://en.wikipedia.org/wiki/Docstring). 
 - proper code.
-- Each directory in the repo should have its own README.md file.
 - The code should be easily readable.

@@ -12,7 +12,7 @@ libpath = sitepackages_path + '\\PyTaskbarProgress\\TaskbarLib.tlb'.replace('\\'
 
 setuptools.setup(
     name='PyTaskbarProgress',
-    version='0.0.1',
+    version='0.0.2',
     author='somePythonProgrammer',
     description='The ultimate taskbar progress python package!',
     packages = setuptools.find_packages(include=['PyTaskbarProgress']),

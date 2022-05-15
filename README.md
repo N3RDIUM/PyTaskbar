@@ -5,7 +5,7 @@
 ![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar?label=license)
 ![visitor badge](https://visitor-badge.glitch.me/badge?page_id=somePythonProgrammer.PyTaskbar)
 
-[Docs Here!](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md)
+[Docs Here!](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/DOCS.md)
 
 #### Works for both terminals and GUIs!
 
@@ -16,7 +16,7 @@
 
 
 ## **Installation**
-[click here](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/docs.md#installation)
+[click here](https://github.com/somePythonProgrammer/PyTaskbar/blob/main/DOCS.md#installation)
 <HR>
         
 ## **Example**:
