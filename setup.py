@@ -13,7 +13,7 @@ libpath = sitepackages_path + '\\PyTaskbarProgress\\TaskbarLib.tlb'.replace('\\'
 
 setuptools.setup(
     name='PyTaskbarProgress',
-    version='0.0.5',
+    version='0.0.6',
     author='somePythonProgrammer',
     description='The ultimate taskbar progress python package!',
     packages = setuptools.find_packages(include=['PyTaskbarProgress']),
@@ -32,5 +32,5 @@ setuptools.setup(
     url = 'https://github.com/somePythonProgrammer/PyTaskbar',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
-    download_url = 'https://github.com/somePythonProgrammer/PyTaskbar/releases/download/0.0.5/PyTaskbarProgress-0.0.5.tar.gz',
+    download_url = 'https://github.com/somePythonProgrammer/PyTaskbar/releases/download/0.0.6/PyTaskbarProgress-0.0.6.tar.gz',
 )
