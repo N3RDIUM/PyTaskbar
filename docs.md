@@ -23,28 +23,28 @@ Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
 
 ### To install with wheel:
 
-1.Download wheel from this distribution:[LINK](https://github.com/somePythonProgrammer/PyTaskbar/releases/tag/0.0.1).
+1. Download wheel from this distribution:[LINK](https://github.com/somePythonProgrammer/PyTaskbar/releases/tag/0.0.1).
 
-2.Do "pip install path-to-wheel.whl"
+2. Do "pip install path-to-wheel.whl"
 
-3.Try out the [example](#docs_example) now!
+3. Try out the [example](#docs_example) now!
 
 ### To install manually:
-1.Download wheel from this distribution:[LINK](https://github.com/somePythonProgrammer/PyTaskbar/releases/tag/0.0.1).
+1. Download wheel from this distribution:[LINK](https://github.com/somePythonProgrammer/PyTaskbar/releases/tag/0.0.1).
 
-2.Once you have downloaded it, unzip the downloaded file.
+2. Once you have downloaded it, unzip the downloaded file.
 
-3.Go to file explorer and get to the directory where you have cloned or unzipped the repository.
+3. Go to file explorer and get to the directory where you have cloned or unzipped the repository.
 
-4.type 'cmd' in the place where you see the path.
+4. type 'cmd' in the place where you see the path.
 
 ![image](https://user-images.githubusercontent.com/74598401/119104885-69c01e80-ba3a-11eb-9c24-45eaf4bab5bf.png)
 
-5.hit enter.
+5. hit enter.
 
-6.type 'python install.py' and hit enter.
+6. type 'python install.py' and hit enter.
 
-8.Try out the [example](#docs_example) now!
+8. Try out the [example](#docs_example) now!
 
 ##### [back to top](#index)
 ##### [API docs](#main_object)
@@ -54,9 +54,9 @@ Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
 ## Example:
 
     import time
-    import PyTaskbar
+    import PyTaskbarProgress
 
-    prog = PyTaskbar.Progress()
+    prog = PyTaskbarProgress.Progress()
     prog.init()
 
     prog.setState('loading')
@@ -114,10 +114,10 @@ Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
 ##### [back to top](#index)
 ##### [back to API docs](#main_object)
 
-    import tbprog
+    import PyTaskbarProgress
     import time
     
-    progress = Progress()
+    progress = PyTaskbarProgress.Progress()
     progress.init()
     
     #taskbar icon becoms green, or starts to display a loading animation
@@ -145,10 +145,10 @@ Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
 ##### [back to top](#index)
 ##### [back to API docs](#main_object)
 
-    import tbprog
+    import PyTaskbarProgress
     import time
     
-    progress = Progress()
+    progress = PyTaskbarProgress.Progress()
     progress.init()
     
     for i in range(100):
