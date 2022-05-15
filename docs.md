@@ -19,9 +19,9 @@ Contributing: [Contributing guidelines](https://github.com/somePythonProgrammer/
 
 ## **Installation**
 
-You can install PyTaskbarProgress with: 
+You can install PyTaskbar with: 
 ```
-pip install PyTaskbarProgress
+pip install PyTaskbar
 ```
 
 ### To install with wheel:
@@ -57,9 +57,9 @@ pip install PyTaskbarProgress
 ## Example:
 
     import time
-    import PyTaskbarProgress
+    import PyTaskbar
 
-    prog = PyTaskbarProgress.Progress()
+    prog = PyTaskbar.Progress()
     prog.init()
 
     prog.setState('loading')
@@ -117,10 +117,10 @@ pip install PyTaskbarProgress
 ##### [back to top](#index)
 ##### [back to API docs](#main_object)
 
-    import PyTaskbarProgress
+    import PyTaskbar
     import time
     
-    progress = PyTaskbarProgress.Progress()
+    progress = PyTaskbar.Progress()
     progress.init()
     
     #taskbar icon becoms green, or starts to display a loading animation
@@ -148,10 +148,10 @@ pip install PyTaskbarProgress
 ##### [back to top](#index)
 ##### [back to API docs](#main_object)
 
-    import PyTaskbarProgress
+    import PyTaskbar
     import time
     
-    progress = PyTaskbarProgress.Progress()
+    progress = PyTaskbar.Progress()
     progress.init()
     
     for i in range(100):

@@ -1,7 +1,7 @@
 import time
-import PyTaskbarProgress
+import PyTaskbar
 
-prog = PyTaskbarProgress.Progress()
+prog = PyTaskbar.Progress()
 prog.init()
 
 prog.setState('loading')

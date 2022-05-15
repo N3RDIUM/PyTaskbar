@@ -3,21 +3,13 @@ import setuptools
 import sys
 import shutil
 
-# Copy the PyTaskbarProgress/TaskbarLib.tlb file to the dist folder
-
-def copy_tlb(dst):
-    shutil.copy("PyTaskbarProgress\\TaskbarLib.tlb", dst)
-
-sitepackages_path = sys.prefix + '\\Lib\\site-packages'
-libpath = sitepackages_path + '\\PyTaskbarProgress\\TaskbarLib.tlb'.replace('\\', '/')
-
 setuptools.setup(
     name='PyTaskbarProgress',
-    version='0.0.6',
+    version='0.0.8',
     author='somePythonProgrammer',
     description='The ultimate taskbar progress python package!',
-    packages = setuptools.find_packages(include=['PyTaskbarProgress']),
-    package_dir={'PyTaskbarProgress': 'PyTaskbarProgress'},
+    packages = setuptools.find_packages(include=['PyTaskbar']),
+    package_dir={'PyTaskbarProgress': 'PyTaskbar'},
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Operating System :: Microsoft :: Windows :: Windows 10',
@@ -32,5 +24,6 @@ setuptools.setup(
     url = 'https://github.com/somePythonProgrammer/PyTaskbar',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
-    download_url = 'https://github.com/somePythonProgrammer/PyTaskbar/releases/download/0.0.6/PyTaskbarProgress-0.0.6.tar.gz',
+    zip_safe=False,
+    download_url='https://github.com/somePythonProgrammer/PyTaskbar/archive/refs/tags/0.0.8.tar.gz'
 )
