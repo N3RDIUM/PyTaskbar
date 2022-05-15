@@ -1,3 +1,4 @@
+from turtle import down
 import setuptools
 import sys
 import shutil
@@ -30,4 +31,5 @@ setuptools.setup(
     url = 'https://github.com/somePythonProgrammer/PyTaskbar',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
+    download_url = 'https://github.com/somePythonProgrammer/PyTaskbar/releases/download/0.0.2/PyTaskbarProgress-0.0.2.tar.gz',
 )
