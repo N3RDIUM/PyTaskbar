@@ -1,9 +1,12 @@
 import ctypes
 
 import comtypes.client as cc
-import time
+import sys
 import warnings
 
+
+parent_dir = __file__.rsplit("\\", 1)[0]
+sys.path.append(parent_dir)
 cc.GetModule("./TaskbarLib.tlb")
 
 import comtypes.gen.TaskbarLib as tbl
@@ -14,9 +17,8 @@ taskbar = cc.CreateObject(
 
 hWnd = ctypes.windll.kernel32.GetConsoleWindow()
 taskbar.ActivateTab(hWnd)
-#print('HWND: '+str(hWnd))
 
-class TaskbarProgress(object):
+class Progress(object):
     def __init__(self,hwnd=hWnd):
         super().__init__()
         self.initialised = False
