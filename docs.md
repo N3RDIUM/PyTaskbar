@@ -19,7 +19,10 @@ Contributing: [Contributing guidelines](https://github.com/somePythonProgrammer/
 
 ## **Installation**
 
-Unfortunately, I did not upload this to Pypi, so you cannot install it with pip.
+You can install PyTaskbarProgress with: 
+```
+pip install PyTaskbarProgress
+```
 
 ### To install with wheel:
 
