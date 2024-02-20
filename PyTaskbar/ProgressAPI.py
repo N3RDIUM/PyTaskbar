@@ -1,9 +1,7 @@
 import ctypes
-
 import comtypes.client as cc
 import sys
 import warnings
-
 
 parent_dir = __file__.rsplit("\\", 1)[0]
 sys.path.append(parent_dir)
@@ -33,33 +31,34 @@ class Progress(object):
         self.progress = 0
         self.initialised = True
 
-    def setState(self,value):
-        if not self.initialised == False:
-            if value == 'normal':
-                taskbar.SetProgressState(self.thisWindow,0)
+    def setState(self, value):
+        if not self.initialised:
+            warnings.warn('Please initialise the object (method: Progress.initialise())')
+            return
+    
+        match value:
+            case 'normal':
+                taskbar.SetProgressState(self.thisWindow, 0)
                 self.state = 'normal'
-
-            elif value == 'warning':
-                taskbar.SetProgressState(self.thisWindow,10)
+    
+            case 'warning':
+                taskbar.SetProgressState(self.thisWindow, 10)
                 self.state = 'warning'
-
-            elif value == 'error':
-                taskbar.SetProgressState(self.thisWindow,15)
+    
+            case 'error':
+                taskbar.SetProgressState(self.thisWindow, 15)
                 self.state = 'error'
-
-            elif value == 'loading':
-                taskbar.SetProgressState(self.thisWindow,-15)
+    
+            case 'loading':
+                taskbar.SetProgressState(self.thisWindow, -15)
                 self.state = 'loading'
-            
-            elif value == 'done':
-                ctypes.windll.user32.FlashWindow(self.thisWindow,True)
+    
+            case 'done':
+                ctypes.windll.user32.FlashWindow(self.thisWindow, True)
                 self.state = 'done'
-            
-            else:
-                warnings.warn('Invalid Argument {} .Please selece one from (normal,warning,error,loading,done).'.format(value))
-
-        else:
-            warnings.warn('Please initialise the object (method:Progress.initialise())')
+    
+            case _:
+                warnings.warn('Invalid Argument {}. Please select one from (normal, warning, error, loading, done).'.format(value))
 
     def setProgress(self,value:int):
         if not self.initialised == False:
