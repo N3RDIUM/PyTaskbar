@@ -1,4 +1,4 @@
-# Welcome to the TbProgressLib documentation!
+# Welcome to the PyTaskbar docs!
 ![](https://img.shields.io/github/downloads/somePythonProgrammer/PyTaskbar/total)
 ![](https://img.shields.io/github/license/somePythonProgrammer/PyTaskbar)
 

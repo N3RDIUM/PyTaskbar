@@ -1,7 +1,6 @@
 import ctypes
 import comtypes.client as cc
 import sys
-import warnings
 
 parent_dir = __file__.rsplit("\\", 1)[0]
 sys.path.append(parent_dir)
@@ -9,63 +8,56 @@ cc.GetModule("./TaskbarLib.tlb")
 
 import comtypes.gen.TaskbarLib as tbl
 from comtypes.gen import _683BF642_E9CA_4124_BE43_67065B2FA653_0_1_0
+
 taskbar = cc.CreateObject(
     "{56FDF344-FD6D-11d0-958A-006097C9A090}",
     interface=tbl.ITaskbarList3) 
 
-hWnd = ctypes.windll.kernel32.GetConsoleWindow()
-taskbar.ActivateTab(hWnd)
 
-class Progress(object):
-    def __init__(self,hwnd=hWnd):
+# Progress types
+NORMAL = 0
+WARNING = 10
+ERROR = 15
+LOADING = -15
+DONE = 1
+
+PROGRESS_TYPES = [
+    NORMAL,
+    WARNING,
+    ERROR,
+    LOADING,
+    DONE
+]
+
+class Progress:
+    def __init__(self, hwnd: int | None = None):
         super().__init__()
-        self.initialised = False
-        self.state = None
-        self.win = hwnd
 
-    def init(self):
-        self.thisWindow = self.win
-        taskbar.ActivateTab(self.win)
+        if hwnd is None:
+            hwnd = ctypes.windll.kernel32.GetConsoleWindow()
+        self.window_handle = hwnd
+
+        taskbar.ActivateTab(hwnd)
         taskbar.HrInit()
-        self.state = 'normal'
-        self.progress = 0
-        self.initialised = True
 
-    def setState(self, value):
-        if not self.initialised:
-            warnings.warn('Please initialise the object (method: Progress.initialise())')
-            return
-    
-        match value:
-            case 'normal':
-                taskbar.SetProgressState(self.thisWindow, 0)
-                self.state = 'normal'
-    
-            case 'warning':
-                taskbar.SetProgressState(self.thisWindow, 10)
-                self.state = 'warning'
-    
-            case 'error':
-                taskbar.SetProgressState(self.thisWindow, 15)
-                self.state = 'error'
-    
-            case 'loading':
-                taskbar.SetProgressState(self.thisWindow, -15)
-                self.state = 'loading'
-    
-            case 'done':
-                ctypes.windll.user32.FlashWindow(self.thisWindow, True)
-                self.state = 'done'
-    
-            case _:
-                warnings.warn('Invalid Argument {}. Please select one from (normal, warning, error, loading, done).'.format(value))
+    def set_progress(self, value: int, max: int = 100):
+        if type(value) != int:
+            raise TypeError(f"Progress.set_progress: expected `value` to be type int, not {type(value)}")
+        if value < 0:
+            raise Exception(f"Progress.set_progress: `value` is less than zero: {value} < 0")
+        if value > max:
+            raise Exception(f"Progress.set_progress: `value` is greater than max: {value} > {max}")
 
-    def setProgress(self,value:int):
-        if not self.initialised == False:
-            taskbar.setProgressValue(self.thisWindow,value,100)
+        taskbar.setProgressValue(self.window_handle, value, max)
 
-        elif value>100 or value<0:
-            warnings.warn('Invalid Argument {} .Please selece one from (<100,>0).'.fromat(value))
+    def set_progress_type(self, progress_type: int):
+        if type(progress_type) != int:
+            raise TypeError(f"Progress.set_progress_type: expected `progress_type` to be type int, not {type(progress_type)}")
+        if progress_type not in PROGRESS_TYPES:
+            raise TypeError(f"Progress.set_progress_type: expected `progress_type` to be one of [NORMAL, WARNING, ERROR, LOADING, DONE], not {progress_type}")
 
-        else:
-            warnings.warn('Please initialise the object (method:Progress.initialise())')
+        taskbar.SetProgressState(self.window_handle, progress_type)
+    
+    def flash_done(self):
+        ctypes.windll.user32.FlashWindow(self.window_handle, True)
+
