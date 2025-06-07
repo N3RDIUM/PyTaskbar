@@ -16,10 +16,12 @@ for i in range(100):
 
 # Make the progress bar yellow
 progress.set_progress_type(WARNING)
+progress.set_progress(42)
 time.sleep(2)
 
 # Make the progress bar red
 progress.set_progress_type(ERROR)
+progress.set_progress(42)
 time.sleep(2)
 
 # Flash the taskbar icon
