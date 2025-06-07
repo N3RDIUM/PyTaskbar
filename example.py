@@ -1,35 +1,28 @@
 import time
 import PyTaskbar
+from PyTaskbar import NORMAL, WARNING, ERROR, LOADING
 
-prog = PyTaskbar.Progress()
-prog.init()
+progress = PyTaskbar.Progress()
 
-prog.setState('loading')
+# Loading animation
+progress.set_progress_type(LOADING)
 time.sleep(5)
 
-prog.setState('normal')
-
+# Show normal (green) progress
+progress.set_progress_type(NORMAL)
 for i in range(100):
-    prog.setProgress(i)
-    time.sleep(0.05)
-prog.setProgress(0)
-
-prog.setState('warning')
-
-for i in range(100):
-    prog.setProgress(i)
+    progress.set_progress(i)
     time.sleep(0.05)
 
-prog.setProgress(0)
-prog.setState('error')
+# Make the progress bar yellow
+progress.set_progress_type(WARNING)
+time.sleep(2)
 
-for i in range(100):
-    prog.setProgress(i)
-    time.sleep(0.05)
+# Make the progress bar red
+progress.set_progress_type(ERROR)
+time.sleep(2)
 
-prog.setProgress(0)
+# Flash the taskbar icon
+progress.flash_done()
+time.sleep(5)
 
-prog.setState('done')
-while True:
-    time.sleep(1)
-    print('close me!')

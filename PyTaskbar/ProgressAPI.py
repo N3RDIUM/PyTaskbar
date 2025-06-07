@@ -1,14 +1,13 @@
 import ctypes
 import comtypes.client as cc
-import sys
 
-parent_dir = __file__.rsplit("\\", 1)[0]
-sys.path.append(parent_dir)
-cc.GetModule("./TaskbarLib.tlb")
+try:
+    cc.GetModule("./TaskbarLib.tlb")
+except:
+    raise Exception("Could not find TaskbarLib.tlb\nDownload it here and move it to your project directory: WIP")
 
 import comtypes.gen.TaskbarLib as tbl
 from comtypes.gen import _683BF642_E9CA_4124_BE43_67065B2FA653_0_1_0
-
 taskbar = cc.CreateObject(
     "{56FDF344-FD6D-11d0-958A-006097C9A090}",
     interface=tbl.ITaskbarList3) 
@@ -19,14 +18,12 @@ NORMAL = 0
 WARNING = 10
 ERROR = 15
 LOADING = -15
-DONE = 1
 
 PROGRESS_TYPES = [
     NORMAL,
     WARNING,
     ERROR,
-    LOADING,
-    DONE
+    LOADING
 ]
 
 class Progress:
@@ -59,6 +56,7 @@ class Progress:
         taskbar.SetProgressState(self.window_handle, progress_type)
     
     def flash_done(self):
+        self.reset()
         ctypes.windll.user32.FlashWindow(self.window_handle, True)
 
     def reset(self):

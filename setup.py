@@ -1,15 +1,12 @@
-from turtle import down
 import setuptools
-import sys
-import shutil
 
 setuptools.setup(
-    name='PyTaskbarProgress',
-    version='0.0.8',
-    author='somePythonProgrammer',
+    name='PyTaskbar',
+    version='0.1.0',
+    author='N3RDIUM',
     description='The ultimate taskbar progress python package!',
     packages = setuptools.find_packages(include=['PyTaskbar']),
-    package_dir={'PyTaskbarProgress': 'PyTaskbar'},
+    package_dir={'PyTaskbar': 'PyTaskbar'},
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Operating System :: Microsoft :: Windows :: Windows 10',
@@ -21,9 +18,9 @@ setuptools.setup(
         'setuptools',
     ],
     include_package_data=True,
-    url = 'https://github.com/somePythonProgrammer/PyTaskbar',
+    url = 'https://github.com/N3RDIUM/PyTaskbar',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
     zip_safe=False,
-    download_url='https://github.com/somePythonProgrammer/PyTaskbar/archive/refs/tags/0.0.8.tar.gz'
+    # download_url='https://github.com/N3RDIUM/PyTaskbar/archive/refs/tags/0.0.8.tar.gz'
 )
