@@ -61,3 +61,7 @@ class Progress:
     def flash_done(self):
         ctypes.windll.user32.FlashWindow(self.window_handle, True)
 
+    def reset(self):
+        self.set_progress_type(NORMAL)
+        self.set_progress(0)
+
