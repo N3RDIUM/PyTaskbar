@@ -1,29 +1,36 @@
 import time
-import PyTaskbar
-from PyTaskbar import NORMAL, WARNING, ERROR, LOADING
+from PyTaskbar import TaskbarProgress, ProgressType
 
-progress = PyTaskbar.Progress()
+# This will target the terminal window.
+progress = TaskbarProgress()
 
-# Loading animation
-progress.set_progress_type(LOADING)
-time.sleep(5)
+# If you're using a GUI framework, pass the target window handle like so:
+# progress = TaskbarProgress(window_handle)
 
-# Show normal (green) progress
-progress.set_progress_type(NORMAL)
+# No progress
+progress.set_progress_type(ProgressType.NOPROGRESS)
+time.sleep(3)
+
+# Indeterminate progress state
+progress.set_progress_type(ProgressType.INDETERMINATE)
+time.sleep(3)
+
+# Normal (green) progress
+progress.set_progress_type(ProgressType.NORMAL)
 for i in range(100):
     progress.set_progress(i)
     time.sleep(0.05)
 
-# Make the progress bar yellow
-progress.set_progress_type(WARNING)
+# Paused (yellow) progress
+progress.set_progress_type(ProgressType.PAUSED)
 progress.set_progress(42)
 time.sleep(2)
 
-# Make the progress bar red
-progress.set_progress_type(ERROR)
+# Error (red) progress
+progress.set_progress_type(ProgressType.ERROR)
 progress.set_progress(42)
 time.sleep(2)
 
-# Flash the taskbar icon
+# Flash the taskbar icon signalling that the task completed
 progress.flash_done()
 time.sleep(5)
