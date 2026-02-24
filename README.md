@@ -9,7 +9,7 @@ desktop/TUI application. Simple API, works with any GUI framework!
 ## Installation
 This package is available on PyPI! For most cases, installation is as simple as:
 ```
-pip install PyTaskbarProgress
+pip install PyTaskbar
 ```
 
 If you want to install latest git instead:
