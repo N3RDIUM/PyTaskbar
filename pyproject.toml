@@ -12,8 +12,8 @@ authors = [
     {name = "Tim Lodemann"}
 ]
 requires-python = ">=3.9"
+license = { text = "MIT" }
 classifiers = [
-    "License :: OSI Approved :: MIT License",
     "Operating System :: Microsoft :: Windows :: Windows 10",
 ]
 dependencies = [
