@@ -1,11 +1,11 @@
 # PyTaskbar
-### The ultimate taskbar progress python package!
+The ultimate taskbar progress python package!
 
-![](https://img.shields.io/github/downloads/N3RDIUM/PyTaskbar/total)
-![](https://img.shields.io/github/license/N3RDIUM/PyTaskbar?label=license)
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=N3RDIUM.PyTaskbar)
+## About
+This is a wrapper API around the TaskbarLib.tlb (Windows 7+) that makes it easy
+to show progress in the taskbar icon, a great plus when it comes to UX for your
+desktop/TUI application. Simple API, works with any GUI framework!
 
-[Docs](https://github.com/N3RDIUM/PyTaskbar/blob/main/DOCS.md)
-
-TODO: Write a good readme
+## Thanks and citations
+- [@timminator](https://github.com/timminator) for helping fix the minimize bug
 

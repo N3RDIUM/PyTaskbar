@@ -27,4 +27,3 @@ time.sleep(2)
 # Flash the taskbar icon
 progress.flash_done()
 time.sleep(5)
-

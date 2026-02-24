@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyTaskbarProgress"
+version = "0.1.1"
+description = "The ultimate taskbar progress python package!"
+readme = "README.md"
+authors = [
+    {name = "N3RDIUM"},
+    {name = "Tim Lodemann"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+]
+dependencies = [
+    "comtypes",
+]
+
+[project.urls]
+Homepage = "https://github.com/N3RDIUM/PyTaskbar"
+Repository = "https://github.com/N3RDIUM/PyTaskbar.git"
+Issues = "https://github.com/N3RDIUM/PyTaskbar/issues"
+
+[tool.setuptools]
+packages = ["PyTaskbar"]
+
+[tool.setuptools.package-data]
+PyTaskbar = ["*.tlb"]
+
+[tool.ruff]
+exclude = ["build", "venv", ".venv", "__pycache__"]
+preview = true
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "W"]
+ignore = ["E501", "SIM108", "SIM102", "SIM114"]
