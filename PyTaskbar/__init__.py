@@ -1,2 +1,3 @@
-from .ProgressAPI import Progress
-from .ProgressAPI import NORMAL, WARNING, ERROR, LOADING
+from .ProgressAPI import ProgressType, TaskbarProgress
+
+__all__ = ["ProgressType", "TaskbarProgress"]
